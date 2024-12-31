@@ -6,5 +6,5 @@ CXX_DEFINES = -DASIO_STANDALONE
 
 CXX_INCLUDES = -I/app/or-tools/include
 
-CXX_FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -fdiagnostics-color=always
 

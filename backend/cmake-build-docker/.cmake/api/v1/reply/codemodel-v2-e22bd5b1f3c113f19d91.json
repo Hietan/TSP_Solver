@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.22"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "tsp_solver_backend::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tsp_solver_backend-Debug-68f1cb2a24747122d566.json",
+					"jsonFile" : "target-tsp_solver_backend-Release-6b38b35f11b5437c3164.json",
 					"name" : "tsp_solver_backend",
 					"projectIndex" : 0
 				}

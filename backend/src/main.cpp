@@ -5,6 +5,12 @@
 
 using namespace operations_research;
 
+void add_cors_headers(crow::response& res) {
+	res.add_header("Access-Control-Allow-Origin", "*");
+	res.add_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+	res.add_header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+}
+
 std::string solve_optimization() {
     MPSolver solver("SimpleLP", MPSolver::GLOP_LINEAR_PROGRAMMING);
 
@@ -32,15 +38,17 @@ std::string solve_optimization() {
     }
 }
 
-
 int main()
 {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){
-        return solve_optimization();
+				crow::response res;
+				add_cors_headers(res);
+				res.write(solve_optimization());
+				return res;
     });
 
-    app.port(18080).run();
+    app.port(18080).multithreaded().run();
 }
 

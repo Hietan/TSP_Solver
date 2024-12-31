@@ -1,7 +1,7 @@
 import React from "react";
 
 export default async function Home() {
-  const apiUrl = "http://localhost:18080";
+  const apiUrl = "http://backend-container:18080";
   let responseText = "";
 
   try {

@@ -34,3 +34,15 @@ RUN wget https://github.com/google/or-tools/releases/download/${ORTOOLS_VERSION}
     tar -xvzf ${ORTOOLS_FILE} --strip-components=1 -C or-tools && \
     rm ${ORTOOLS_FILE}
 
+# Build
+COPY . /app
+WORKDIR /app
+RUN mkdir -p build && \
+		cd build && \
+		cmake .. && \
+		make
+
+EXPOSE 18080
+
+CMD ["./build/tsp_solver_backend"]
+
