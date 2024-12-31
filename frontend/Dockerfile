@@ -1,4 +1,4 @@
-FROM node:23-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
@@ -9,7 +9,5 @@ RUN yarn install
 COPY . .
 
 RUN yarn build
-
-EXPOSE 3000
 
 CMD ["yarn", "start"]
