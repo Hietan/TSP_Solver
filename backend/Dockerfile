@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM --platform=linux/amd64 ubuntu:24.04
 
 # Install necessary tools
 # for "CLion" project : cmake, gdb, g++ (Install "GCC 13" Later)
